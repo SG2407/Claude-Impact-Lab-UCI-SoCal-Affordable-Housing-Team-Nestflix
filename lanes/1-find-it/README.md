@@ -2,7 +2,7 @@
 
 > Where can the next affordable home go?
 
-**Room:** Eric Li Classroom (1128)
+**Room:** any room. Your team picks one on the hub.
 
 ## The problem
 

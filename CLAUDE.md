@@ -56,7 +56,7 @@ See `docs/background.md` and each lane's README under `lanes/`.
 
 ## How to work today
 
-- The team has about four and a half hours in its lane room (10:00 AM to 2:30 PM). Help them build
+- The team has about four and a half hours in its breakout room (10:00 AM to 2:30 PM). Help them build
   what they decide, and get something working early.
 - A live demo is required for finalists. A working rough tool beats a polished pitch. Keep a
   runnable version at all times.

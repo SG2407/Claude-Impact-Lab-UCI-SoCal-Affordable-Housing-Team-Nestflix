@@ -2,7 +2,7 @@
 
 > Does it pencil, and who closes the gap?
 
-**Room:** Porter Room (5200)
+**Room:** any room. Your team picks one on the hub.
 
 ## The problem
 

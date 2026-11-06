@@ -39,7 +39,7 @@ Wi-Fi: UCI-guest.
 | 9:00 AM | Kickoff in the auditorium. The lanes are revealed |
 | 9:30 AM | Anthropic build workshop, in the auditorium |
 | By 10:00 AM | Register your team on the hub (`#teams`) |
-| 10:00 AM | Go to your lane's breakout room |
+| 10:00 AM | Go to the room your team picked |
 | Around noon | Lunch |
 | **2:30 PM** | **Submissions due.** Hub form, public repo and a 30-second video. Anthropic Q&A for anyone who wants it |
 | 3:00 PM | Finalists announced. They present live in the auditorium |
@@ -50,13 +50,14 @@ Wi-Fi: UCI-guest.
 
 Teams of up to 5, ideally one of each role: builder/engineer, creative/designer,
 communicator/presenter, organizer/facilitator. Solo is fine to start: the hub's team board shows
-teams with open seats and the roles they want. Each team picks one lane. One lane per room.
+teams with open seats and the roles they want. Each team picks a room on the hub (rooms fill up as teams register), goes there, and picks one
+lane together. Any lane works in any room.
 
-| | Lane | The question | Who is stuck | Room |
-|---|---|---|---|---|
-| 1 | [**Find it**](lanes/1-find-it/README.md) | Where can the next affordable home go? | An acquisitions lead with no GIS team, a congregation with an underused lot, city housing staff | Eric Li Classroom (1128) |
-| 2 | [**Clear it**](lanes/2-clear-it/README.md) | How do we turn four years into two? | A nonprofit project manager, a small builder, a homeowner adding an ADU, a city permit tech | Judy Rosener Room (2321) |
-| 3 | [**Fund it**](lanes/3-fund-it/README.md) | Does it pencil, and who closes the gap? | A nonprofit finance lead, a development director, a donor, a city housing analyst | Porter Room (5200) |
+| | Lane | The question | Who is stuck |
+|---|---|---|---|
+| 1 | [**Find it**](lanes/1-find-it/README.md) | Where can the next affordable home go? | An acquisitions lead with no GIS team, a congregation with an underused lot, city housing staff |
+| 2 | [**Clear it**](lanes/2-clear-it/README.md) | How do we turn four years into two? | A nonprofit project manager, a small builder, a homeowner adding an ADU, a city permit tech |
+| 3 | [**Fund it**](lanes/3-fund-it/README.md) | Does it pencil, and who closes the gap? | A nonprofit finance lead, a development director, a donor, a city housing analyst |
 
 Each lane page has the problem, who is stuck, the open question, a few ideas to get you thinking
 (not a spec) and a list of data to start from. Build what your team thinks will help.

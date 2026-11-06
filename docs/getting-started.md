@@ -53,7 +53,8 @@ registers everyone: each teammate's name, email and role. The four roles are bui
 creative/designer, communicator/presenter and organizer/facilitator; the best teams cover all
 four. Still short a role? Mark what you are looking for and the team shows on the board for
 people in the room to find. Picking a lane is optional at this point; decide together and update
-the team later. Then go to your lane's breakout room.
+the team later. Pick a room for the team on the hub (rooms fill up, so register early), then go
+there together.
 
 ## If you do not write code
 

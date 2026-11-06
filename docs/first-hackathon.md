@@ -4,7 +4,7 @@ What to expect, in two minutes.
 
 ## You do not need
 
-- **A team.** Solo is fine to start. Find a team at kickoff or in your lane room. Teams are up to 5.
+- **A team.** Solo is fine to start. Find a team at kickoff or on the hub's team board. Teams are up to 5.
 - **An idea.** The lanes give you the problems. You pick one with your team.
 - **To write code.** Claude writes code from plain descriptions. Teams also need people who
   understand housing, finance or city permits, test the tool, write the words on screen and run
@@ -14,7 +14,7 @@ What to expect, in two minutes.
 ## What the day looks like
 
 Kickoff is at 9:00 AM and the lanes are revealed. An Anthropic build workshop follows at 9:30.
-By 10:00 you register your team on the hub and go to your lane's breakout room. You build until
+By 10:00 you register your team on the hub, pick a room and go there together. You build until
 2:30 PM, with lunch around noon. At 2:30 you hand in what you have. Judges shortlist, and the
 finalists present live in the auditorium at 3:00.
 

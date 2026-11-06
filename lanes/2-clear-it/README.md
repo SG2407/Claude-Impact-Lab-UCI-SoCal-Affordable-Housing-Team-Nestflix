@@ -2,7 +2,7 @@
 
 > How do we turn four years into two?
 
-**Room:** Judy Rosener Room (2321)
+**Room:** any room. Your team picks one on the hub.
 
 ## The problem
 
