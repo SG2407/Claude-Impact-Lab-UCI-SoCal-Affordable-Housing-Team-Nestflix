@@ -48,8 +48,9 @@ Wi-Fi: UCI-guest.
 
 ## The three lanes
 
-Teams of up to 5. Solo is fine to start. Find a team at kickoff or in your lane room. Each team
-picks one lane. One lane per room.
+Teams of up to 5, ideally one of each role: builder/engineer, creative/designer,
+communicator/presenter, organizer/facilitator. Solo is fine to start: the hub's team board shows
+teams with open seats and the roles they want. Each team picks one lane. One lane per room.
 
 | | Lane | The question | Who is stuck | Room |
 |---|---|---|---|---|

@@ -48,8 +48,12 @@ $100 in Claude API credits per person (API only, not Claude.ai). The claim link 
 
 ## 4. Register your team
 
-By 10:00 AM, on the hub: <https://claudesocal.com/uci-impact-lab> (`#teams`). Then go to your
-lane's breakout room.
+By 10:00 AM, on the hub: <https://claudesocal.com/uci-impact-lab> (`#teams`). One person
+registers everyone: each teammate's name, email and role. The four roles are builder/engineer,
+creative/designer, communicator/presenter and organizer/facilitator; the best teams cover all
+four. Still short a role? Mark what you are looking for and the team shows on the board for
+people in the room to find. Picking a lane is optional at this point; decide together and update
+the team later. Then go to your lane's breakout room.
 
 ## If you do not write code
 

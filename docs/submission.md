@@ -1,7 +1,8 @@
 # Submitting
 
-**One submission per team. Due 2:30 PM.** The form is on the event hub. You can edit it until
-2:30 by submitting again with the same team name and contact email.
+**One submission per team. Due 2:30 PM.** On the event hub, type your email (the one on your
+team registration) and your team, members and lane carry over. Anyone on the team can submit or
+update it with their own email. Judges see the latest version.
 
 **<https://claudesocal.com/uci-impact-lab>** (`#submit`)
 
@@ -14,18 +15,15 @@
 
 | Field | What to put |
 |---|---|
-| Team name | The name you registered on the hub |
-| Lane | 1 Find it, 2 Clear it, 3 Fund it, or your own direction |
+| Your email | The one on your team registration. It brings up your team |
+| Lane | 1 Find it, 2 Clear it or 3 Fund it (pick the closest if you bent the brief) |
 | One-liner | One sentence: who it is for and what it does |
 | The real user, before and after | Who they are. What is hard today. What changes with your tool |
 | What it does | A short description |
-| How to try it | Steps, or a link. Someone not on your team should be able to follow them |
 | Sources and assumptions | The laws, datasets and programs you used, and every number you assumed |
 | Public repo URL | Your GitHub repo |
 | 30-second video URL | A link anyone can open |
 | Live demo URL | Optional. If you have one running somewhere |
-| Members | Everyone on the team |
-| Contact name and email | One person. Use the same email each time you edit |
 
 ## The 30-second video
 
