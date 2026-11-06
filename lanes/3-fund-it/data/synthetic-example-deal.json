@@ -1,0 +1,65 @@
+{
+  "SYNTHETIC": "This is a made-up deal for testing. It is not a real project, building, city, program or buyer. Every number is an ASSUMPTION chosen only so the arithmetic is easy to check. Do not cite it as a benchmark.",
+  "name": "SYNTHETIC six-home example",
+  "homes": 6,
+  "currency": "USD",
+  "per_home": {
+    "cost_to_create": {
+      "value": 700000,
+      "label": "ASSUMPTION",
+      "note": "Land, hard costs, soft costs and fees, all in. Invented."
+    },
+    "price_buyer_can_support": {
+      "value": 380000,
+      "label": "ASSUMPTION",
+      "note": "What an invented household could carry. A real tool would derive this from a dated income-limits table, the affordable-cost formula in the statute, a mortgage rate, taxes and insurance."
+    },
+    "gap": {
+      "value": 320000,
+      "label": "ASSUMPTION (derived)",
+      "formula": "cost_to_create - price_buyer_can_support"
+    }
+  },
+  "total_gap": {
+    "value": 1920000,
+    "label": "ASSUMPTION (derived)",
+    "formula": "per_home.gap * homes"
+  },
+  "gap_closing_sources": [
+    {
+      "name": "Placeholder city housing fund",
+      "amount": 600000,
+      "label": "ASSUMPTION",
+      "note": "Not a real program."
+    },
+    {
+      "name": "Placeholder state program",
+      "amount": 700000,
+      "label": "ASSUMPTION",
+      "note": "Not a real program."
+    },
+    {
+      "name": "Placeholder donors",
+      "amount": 300000,
+      "label": "ASSUMPTION",
+      "note": "Not real donors."
+    },
+    {
+      "name": "Placeholder earned revenue (donated-goods resale)",
+      "amount": 120000,
+      "label": "ASSUMPTION",
+      "note": "Not a real store."
+    }
+  ],
+  "sources_total": {
+    "value": 1720000,
+    "label": "ASSUMPTION (derived)",
+    "formula": "sum of gap_closing_sources.amount"
+  },
+  "remaining_gap": {
+    "value": 200000,
+    "label": "ASSUMPTION (derived)",
+    "formula": "total_gap - sources_total",
+    "note": "Still unfunded. In the equation, the deal only reaches $0 when this is zero."
+  }
+}
