@@ -41,7 +41,7 @@ Wi-Fi: UCI-guest.
 | By 10:00 AM | Register your team on the hub (`#teams`) |
 | 10:00 AM | Go to the room your team picked |
 | Around noon | Lunch |
-| **2:30 PM** | **Submissions due.** Hub form, public repo and a 30-second video. Anthropic Q&A for anyone who wants it |
+| **2:30 PM** | **Submissions due.** Hub form, public repo and a demo video (30 seconds ideal). Anthropic Q&A for anyone who wants it |
 | 3:00 PM | Finalists announced. They present live in the auditorium |
 | 4:00 PM | Judges deliberate |
 | 4:15 PM | Winners and photos |
@@ -90,8 +90,8 @@ The full version, with the reasons, is in [ground rules](docs/ground-rules.md).
 One per team:
 
 - the submission form at [claudesocal.com/uci-impact-lab](https://claudesocal.com/uci-impact-lab) (`#submit`)
-- a public GitHub repo with a README
-- a 30-second video made with Claude's help
+- a public GitHub repo with a README (see the [repo rules](docs/submission.md#repo-rules-so-judges-can-check-it-works))
+- a demo video made with Claude's help (30 seconds is ideal, up to 2 minutes)
 
 [How to submit](docs/submission.md).
 

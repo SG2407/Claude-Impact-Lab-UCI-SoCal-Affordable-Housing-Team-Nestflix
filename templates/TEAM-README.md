@@ -18,7 +18,7 @@ Who is the person? What is hard for them today? Three sentences.
 
 What it does. A screenshot or a short clip helps.
 
-**30-second video:** [link]
+**Demo video:** [link, or "uploaded on the hub"]
 **Live demo:** [link, optional]
 
 ## How Claude is used

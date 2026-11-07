@@ -10,7 +10,7 @@ update it with their own email. Judges see the latest version.
 
 1. **A public GitHub repo** with your code and a README that follows
    [`templates/TEAM-README.md`](../templates/TEAM-README.md).
-2. **A 30-second video** made with Claude's help. See below.
+2. **A demo video** made with Claude's help: 30 seconds is ideal, up to 2 minutes. See below.
 3. **The submission form**, with these fields:
 
 | Field | What to put |
@@ -21,17 +21,34 @@ update it with their own email. Judges see the latest version.
 | The real user, before and after | Who they are. What is hard today. What changes with your tool |
 | What it does | A short description |
 | Sources and assumptions | The laws, datasets and programs you used, and every number you assumed |
-| Public repo URL | Your GitHub repo |
-| 30-second video URL | A link anyone can open |
+| Public repo URL | The main page of your repo, like `https://github.com/you/project` |
+| Video | Upload the file on the form (MP4 or MOV, up to 2 minutes), or paste a link anyone can open |
 | Live demo URL | Optional. If you have one running somewhere |
 
-## The 30-second video
+## The demo video
 
 Made with Claude's help. For example, Claude writes the script or storyboard, or builds the demo
-that the video shows. Use any screen recording tool. Put it somewhere with a link anyone can open:
-YouTube unlisted, Loom, or Drive with link sharing on. Put the link in your README too.
+that the video shows. Use any screen recording tool, or your phone.
 
-Thirty seconds is short. One user, one problem, the tool working, the result.
+Upload the file straight from the submission form (MP4 or MOV, up to 2 minutes, 500 MB). If the
+upload struggles, paste a link anyone can open instead: YouTube unlisted, Loom, or Drive with link
+sharing on.
+
+Aim for 30 seconds. One user, one problem, the tool working, the result.
+
+## Repo rules, so judges can check it works
+
+1. **Paste the repo's main page**, like `https://github.com/you/project`. Not a link to a file, a
+   branch, or your profile.
+2. **Public, and checked signed out.** Open the link in a private browser window before you submit.
+3. **Everything pushed to the main branch by 2:30.** Judges look at the main branch. Commits after
+   2:30 are visible and flagged.
+4. **A "Try it" section with the exact commands** to run it on a fresh laptop, plus what to install.
+   Pin versions (`requirements.txt`, `package.json`).
+5. **No keys in the repo.** Add a `.env.example` with just the variable names. If a key was ever
+   committed, rotate it now: deleting the file does not remove it from the history.
+6. **Include a small sample of the data** so it runs without your accounts, or give a live demo link.
+7. **Label what is mocked** in the README, and mark every made-up number ASSUMPTION.
 
 ## New to GitHub?
 
@@ -47,7 +64,7 @@ Thirty seconds is short. One user, one problem, the tool working, the result.
 - [ ] Sources and assumptions are shown. Every made-up number is labelled.
 - [ ] There is no personal information anywhere in the repo or its history.
 - [ ] There are no API keys or passwords in the repo or its history.
-- [ ] The video link opens when you are signed out.
+- [ ] The video is uploaded, or its link opens when you are signed out.
 - [ ] Someone who is not on your team could follow the README and run it.
 
 ## After 2:30
