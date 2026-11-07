@@ -1,0 +1,1717 @@
+Use GitHub Copilot Chat in Agent Mode with your project folder open in VS Code. Paste the entire prompt below as one message.
+
+I've tailored it to NestFlix, your four user portals, the Python FastAPI backend, and the actual Fund It challenge files. It prioritizes a working end-to-end demo over implementing every feature.
+
+## Complete GitHub Copilot master prompt
+
+Copy everything in the block below.
+
+```
+
+You are acting as a Principal Full-Stack Engineer, Senior Solution Architect, AI Engineer, Product Designer, and Hackathon Technical Lead.
+
+Your task is to BUILD a complete, runnable, end-to-end web application named "NestFlix" for the UCI × Claude Impact Lab Affordable Housing Hackathon, specifically the "Fund It" lane.
+
+Do not just explain how to build it.
+Do not simply generate a plan or pseudocode.
+CREATE THE ACTUAL PROJECT FILES, IMPLEMENT THE FUNCTIONALITY, CONNECT FRONTEND AND BACKEND, AND TEST THE APPLICATION.
+
+You have permission to create and modify files in the current project workspace.
+
+IMPORTANT:
+- Prioritize a working demo over feature completeness.
+- Implement the core functionality first.
+- Use Python FastAPI for the backend. This is mandatory.
+- Build a polished, professional frontend.
+- Avoid unnecessary infrastructure and complexity.
+- Do not ask me repeated clarification questions.
+- Make reasonable implementation decisions independently.
+- Do not stop after scaffolding the project.
+- If a dependency or feature causes problems, simplify it and continue.
+- Do not claim something works unless you have verified it.
+- The final product must remain usable without paid APIs or external services.
+- The event deadline is November 7, 2026, at 2:30 PM Pacific. Prioritize accordingly.
+
+============================================================
+1. PROJECT OVERVIEW
+============================================================
+
+PROJECT NAME:
+NestFlix (NF)
+
+TAGLINE:
+"Bridging the Gap Between Housing Dreams and Funding Reality."
+
+PROJECT TYPE:
+AI-powered Affordable Housing Funding, Matching, and Financial Intelligence Platform.
+
+HACKATHON:
+Claude Impact Lab: UCI × SoCal Affordable Housing
+
+LANE:
+Fund It — "Does it pencil, and who closes the gap?"
+
+PROBLEM:
+
+Affordable housing developers struggle to complete projects because construction costs, land costs, financing costs, and other expenses exceed what eligible households can afford.
+
+Developers must combine different financing sources:
+- Government subsidies
+- Donations
+- Corporate contributions
+- Employer housing assistance
+- Grants
+- Construction loans
+- Other eligible financing
+
+These sources have different requirements, restrictions, deadlines, and availability.
+
+Today, developers often assemble this funding manually.
+
+Donors also struggle to identify legitimate projects and understand how their contributions affect affordable housing outcomes.
+
+Buyers struggle to understand affordability, eligibility, housing assistance, and mortgage scenarios.
+
+Employers may want to support workforce housing because employees cannot afford to live close to their workplaces.
+
+SOLUTION:
+
+NestFlix connects:
+1. Donors and Funding Partners
+2. Builders and Housing Developers
+3. Buyers and Households
+4. Employers and Workforce Housing Sponsors
+
+All participants connect through the NestFlix platform.
+
+NestFlix provides:
+- Housing project management
+- Funding gap calculations
+- Funding source discovery
+- AI-powered funding recommendations
+- Donation and employer contribution simulations
+- Housing affordability calculations
+- Mortgage interest-rate sensitivity
+- Transparent financial breakdowns
+- Impact reports
+- Funding scenario comparisons
+
+The CORE VALUE PROPOSITION:
+
+"NestFlix helps affordable housing developers discover, combine, and evaluate funding sources while demonstrating how donors and employers can close the affordability gap."
+
+The PRIMARY demo user should be:
+A finance lead at a nonprofit affordable housing developer.
+
+The other three user interfaces must support this central workflow.
+
+The application is a decision-support prototype, NOT a real bank, payment processor, insurer, or lending platform.
+
+============================================================
+2. HACKATHON REQUIREMENTS AND DATA
+============================================================
+
+Before implementation, inspect the current repository.
+
+If the official challenge files exist, read:
+
+- README.md
+- CLAUDE.md
+- docs/ground-rules.md
+- docs/judging.md
+- docs/submission.md
+- lanes/3-fund-it/README.md
+- lanes/3-fund-it/scenarios.json
+- lanes/3-fund-it/data/synthetic-example-deal.json
+- lanes/3-fund-it/data/DATA-SOURCES.md
+
+Preserve those files unless modifications are genuinely necessary.
+
+The challenge's core equation is:
+
+Funding Gap =
+Total Development Cost
+- Affordable Buyer Purchase Price
+- Existing Public Subsidies
+- Existing Earned Revenue
+- Confirmed Additional Funding
+
+Use the provided synthetic example deal.
+
+INITIAL DEMO DATA:
+
+Project:
+"Synthetic Affordable Home — Orange County"
+
+Costs:
+- Land and building purchase: $360,000
+- Time costs while waiting: $85,000
+- Construction and repairs: $40,000
+- Design, legal, fees and sales: $50,000
+
+Total development cost: $535,000
+
+Existing sources:
+- Affordable family purchase price: $285,000
+- Existing public subsidies: $100,000
+- Earned revenue: $55,000
+
+Initial remaining funding gap: $95,000
+
+These values are SYNTHETIC ASSUMPTIONS.
+
+They must NEVER be represented as verified market figures or a real housing development.
+
+The following illustrative funding scenario should also be supported:
+
+- Donor contribution: $25,000
+- Employer contribution: $40,000
+- Additional grant: $30,000
+
+Total potential new funding: $95,000
+
+Remaining gap in the scenario: $0
+
+This only shows that the proposed financing arithmetic balances.
+
+It does NOT mean the commitments exist, are approved, can legally be combined, or are available for disbursement.
+
+IMPORTANT:
+Distinguish:
+- Proposed funding
+- Applied-for funding
+- Committed funding
+- Disbursed funding
+
+Only confirmed, non-duplicated committed funding may reduce the "secured funding gap."
+
+A separate "scenario gap" may include proposed funding, but must be clearly labeled.
+
+HACKATHON JUDGING PRIORITIES:
+
+1. Impact: Would a nonprofit or city use it?
+2. Works: Does the live demo function?
+3. Scale: Could it support many projects later?
+4. Innovation: Does it offer a new useful approach?
+
+Every important financial figure should show its origin, assumptions, and relevant source.
+
+Do not invent laws, income limits, addresses, interest rates, grant amounts, or funding availability.
+
+Use only provided or publicly documented data.
+
+Do not collect or store real personal information about tenants, buyers, or residents.
+
+============================================================
+3. MANDATORY TECHNOLOGY STACK
+============================================================
+
+FRONTEND:
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui where practical
+- Lucide React icons
+- Recharts for analytics
+- Fetch API for backend communication
+
+BACKEND:
+- Python 3.11+
+- FastAPI
+- Uvicorn
+- Pydantic v2
+- SQLModel with SQLite
+- Standard Python libraries for financial calculations
+- Anthropic Python SDK for optional Claude integration
+- pytest for backend tests
+
+DATABASE:
+- SQLite for the demo
+- SQLModel for database models
+- Seed data created automatically on first run
+- Local persistence for projects and contributions
+
+Do NOT require:
+- Supabase
+- AWS
+- Kubernetes
+- Docker
+- Redis
+- Kafka
+- Paid databases
+- OAuth setup
+- Real banking APIs
+- Real payment providers
+
+These are unnecessary for the hackathon.
+
+AI:
+Use Anthropic Claude API if ANTHROPIC_API_KEY is configured.
+
+If no API key is available, the application must still work using transparent deterministic explanations and rule-based funding matches.
+
+Never pretend the fallback is a live AI response.
+
+Use environment variables for secrets.
+
+DEPLOYMENT:
+- Frontend compatible with Vercel
+- Backend runnable locally using Uvicorn
+- Provide instructions for deploying FastAPI separately if needed
+
+For the hackathon, local functionality is more important than complicated cloud deployment.
+
+============================================================
+4. REQUIRED PROJECT STRUCTURE
+============================================================
+
+Use a clean monorepo:
+
+nestflix/
+  frontend/
+    app/
+      page.tsx
+      dashboard/
+      donors/
+      builders/
+      buyers/
+      employers/
+    components/
+      layout/
+      dashboard/
+      funding/
+      charts/
+      ui/
+    lib/
+      api.ts
+      types.ts
+      utils.ts
+    package.json
+    .env.example
+
+  backend/
+    app/
+      main.py
+      config.py
+      database.py
+      models.py
+      schemas.py
+
+      routers/
+        projects.py
+        finance.py
+        funding.py
+        contributions.py
+        buyers.py
+        ai.py
+
+      services/
+        finance_service.py
+        funding_service.py
+        mortgage_service.py
+        ai_service.py
+
+      seed.py
+
+    data/
+      funding_programs.json
+
+    tests/
+      test_finance.py
+      test_api.py
+
+    requirements.txt
+    .env.example
+
+  README.md
+  .gitignore
+
+The exact internal organization can be adjusted if a simpler architecture improves reliability.
+
+Do not create unnecessary abstraction layers.
+
+Keep backend routes thin and financial calculations in testable service functions.
+
+============================================================
+5. USER EXPERIENCE AND DESIGN
+============================================================
+
+The application must look like a real, professional financial technology SaaS dashboard.
+
+DESIGN STYLE:
+- Modern and premium
+- Clean and trustworthy
+- Spacious layout
+- Professional typography
+- Light theme by default
+- Dark navy, teal, white, and subtle green accents
+- Rounded cards
+- Consistent spacing
+- Clear visual hierarchy
+- Attractive statistics and charts
+- Responsive desktop and mobile layouts
+- Smooth hover states and transitions
+- Accessible contrast and semantic labels
+
+Avoid:
+- Generic unstyled forms
+- Excessive gradients
+- Large blocks of unnecessary text
+- Broken navigation
+- Blank pages
+- Placeholder buttons that do nothing
+- Fake functionality
+- Overcomplicated animations
+
+MAIN NAVIGATION:
+
+1. Overview
+2. Builder Dashboard
+3. Donor Dashboard
+4. Buyer Dashboard
+5. Employer Dashboard
+
+For the hackathon, do not implement authentication.
+
+Instead, implement a functional DEMO ROLE SWITCHER.
+
+The user can select a role and open the corresponding dashboard.
+
+Display a small:
+"Demo Mode — Synthetic Data"
+
+The core project should be shared across dashboards so contributions made in one portal appear in others.
+
+The app should have a prominent:
+"Explore Demo Project"
+button.
+
+All navigation buttons, sliders, forms, and primary calls to action must function.
+
+============================================================
+6. FEATURE PRIORITIES
+============================================================
+
+Implement features in this priority order.
+
+P0 — MUST WORK:
+- App startup
+- Backend API
+- Demo project data
+- Financial gap calculator
+- Builder Dashboard
+- Donor contribution simulation
+- Employer contribution simulation
+- Buyer affordability and mortgage calculations
+- Funding stack visualization
+- Shared API integration
+- Automatic seed data
+- Basic tests
+- README instructions
+
+P1 — HIGH VALUE:
+- AI funding recommendations
+- Funding opportunity matching
+- Rate sensitivity visualization
+- Contribution persistence
+- Downloadable financial report
+- Impact report
+- Source and assumption explanations
+
+P2 — OPTIONAL:
+- Multi-project support
+- Quote comparison
+- Project milestones
+- Document uploads
+- Advanced program eligibility rules
+- More advanced employer consortium logic
+
+DO NOT implement P2 until P0 works and has been tested.
+
+Prefer a smaller, fully functioning application over an ambitious incomplete application.
+
+============================================================
+7. FEATURE 1 — OVERVIEW DASHBOARD
+============================================================
+
+Create a professional home dashboard.
+
+Include:
+- NestFlix logo/name
+- Tagline
+- Hero section
+- Summary of the platform
+- Four stakeholder cards
+- "Explore Demo Project" button
+- Navigation to all four portals
+
+Display dashboard metrics from real backend API responses:
+
+- Total development cost
+- Existing funding
+- Initial funding gap
+- Committed additional funding
+- Remaining secured gap
+- Scenario gap
+
+Use currency formatting.
+
+For example:
+$535,000
+$440,000
+$95,000
+
+Display a chart showing the financing composition:
+- Buyer purchase price
+- Existing subsidies
+- Earned revenue
+- Donor funding
+- Employer funding
+- Additional grants
+- Remaining gap
+
+Include a visible assumptions disclaimer.
+
+============================================================
+8. FEATURE 2 — BUILDER DASHBOARD
+============================================================
+
+This is the PRIMARY feature.
+
+The nonprofit housing finance lead should open the project and instantly understand its financing situation.
+
+IMPLEMENT:
+
+A. PROJECT OVERVIEW
+
+Display:
+- Project name
+- Location
+- Number of homes
+- Development status
+- Total development cost
+- Affordable buyer purchase price
+- Existing subsidies
+- Earned revenue
+- Funding gap
+
+B. PROJECT COST BREAKDOWN
+
+Show editable cost inputs:
+- Land/building
+- Construction
+- Holding/time costs
+- Legal/design/fees
+- Other costs, if needed
+
+Recalculate totals immediately through the backend.
+
+C. FUNDING GAP CALCULATOR
+
+Formula:
+
+initial_gap = max(
+    0,
+    total_development_cost
+    - affordable_buyer_price
+    - existing_public_subsidies
+    - earned_revenue
+)
+
+secured_gap = max(
+    0,
+    initial_gap
+    - confirmed_additional_funding
+)
+
+scenario_gap = max(
+    0,
+    secured_gap
+    - proposed_additional_funding
+)
+
+Avoid double-counting.
+
+Return any funding surplus separately.
+
+Use the backend as the source of truth.
+
+D. FUNDING STACK
+
+Show a visual stacked bar chart.
+
+Funding categories:
+- Buyer contribution
+- Public subsidies
+- Earned revenue
+- Confirmed donor contributions
+- Confirmed employer contributions
+- Confirmed other grants
+- Proposed contributions
+- Remaining funding gap
+
+Clearly distinguish confirmed and proposed contributions.
+
+E. FUNDING MATCHER
+
+Show a list of potentially relevant funding programs.
+
+Each card should contain:
+- Program name
+- Provider
+- Funding type
+- Who may qualify
+- Important restrictions
+- Source URL
+- Source verification date
+- Known/unknown funding availability
+- Why the program may fit
+
+Do not represent matches as approved funding.
+
+F. FUNDING SIMULATOR
+
+Allow the finance lead to adjust:
+- Donor contribution
+- Employer contribution
+- Additional grant
+
+Changes should update:
+- Scenario funding gap
+- Funding progress
+- Financing breakdown
+- Percentage covered
+
+Ensure this works end-to-end with the FastAPI financial engine.
+
+G. AI FUNDING RECOMMENDATION
+
+Include a button:
+"Generate Funding Strategy"
+
+The response should:
+1. Summarize the current financial gap.
+2. Identify candidate funding categories/programs.
+3. Explain why they might fit.
+4. Identify missing eligibility information.
+5. Mention potential restrictions.
+6. Provide next actions.
+
+If Claude is unavailable, return a clearly labeled rule-based strategy.
+
+Do not hallucinate available grant amounts.
+
+============================================================
+9. FEATURE 3 — DONOR DASHBOARD
+============================================================
+
+PURPOSE:
+Let a donor understand a project and simulate the impact of providing funding.
+
+IMPLEMENT:
+
+A. DONOR VIEW
+
+Display:
+- Available demo housing project
+- Total project cost
+- Initial financing gap
+- Confirmed funding
+- Remaining funding need
+
+B. CONTRIBUTION SIMULATOR
+
+Provide:
+- Donation amount input
+- Slider
+- Suggested contribution amounts
+- Recalculate button or live calculations
+
+Example:
+Donation = $25,000
+
+Initial gap = $95,000
+
+Projected gap after this contribution = $70,000
+
+Show:
+- Contribution impact percentage
+- Remaining gap
+- Before/after comparison
+
+C. IMPACT BREAKDOWN
+
+Show how the contribution could be allocated against the synthetic project cost categories.
+
+This is a proposed allocation, not a verified expenditure.
+
+Do not claim the donation actually purchased materials or paid invoices.
+
+D. CONTRIBUTION RECORD
+
+Provide:
+"Save Demo Pledge"
+
+This should call the backend and persist a PROPOSED contribution to SQLite.
+
+Proposed pledges must NOT automatically become confirmed funding.
+
+A finance lead may optionally mark a demo contribution as confirmed through a separate explicit action.
+
+E. DONOR TRANSPARENCY
+
+Show:
+- Total project budget
+- Planned allocations
+- Funding status
+- Project progress in demo mode
+
+Include a note explaining that tax deductibility depends on the qualified recipient and applicable rules.
+
+Do not promise tax benefits.
+
+============================================================
+10. FEATURE 4 — BUYER DASHBOARD
+============================================================
+
+PURPOSE:
+Help a synthetic household understand home affordability.
+
+Use fictional buyer data only.
+
+IMPLEMENT:
+
+A. AFFORDABILITY CALCULATOR
+
+Inputs:
+- Annual household income
+- Monthly existing debt
+- Available down payment
+- Mortgage interest rate
+- Loan term
+- Estimated annual property tax
+- Annual insurance
+- Monthly HOA
+- Other housing expenses
+
+Use a configurable assumed maximum housing budget ratio.
+
+Explain clearly that the ratio is an assumption, not a universal underwriting rule.
+
+Calculate:
+- Monthly income
+- Assumed available housing payment
+- Maximum estimated loan principal
+- Estimated affordable purchase price
+- Monthly mortgage payment
+- Estimated total monthly housing cost
+
+Do these calculations in Python.
+
+Do not rely on Claude to perform arithmetic.
+
+B. MORTGAGE INTEREST-RATE SIMULATOR
+
+Provide an interactive slider.
+
+Example values:
+- 6.0%
+- 7.18%
+- 8.0%
+- 9.0%
+
+Use the challenge dataset's documented historical rate only as a dated reference point, not as a live market quote.
+
+Show how mortgage payment and affordable purchase price change as the interest rate changes.
+
+Use a standard amortizing mortgage formula.
+
+Handle zero interest correctly.
+
+C. BUYER-TO-PROJECT GAP
+
+Demonstrate how changing the affordable buyer price can change the developer's remaining financing gap.
+
+For the same synthetic home:
+- Lower purchasing capacity increases the funding requirement.
+- Higher purchasing capacity reduces it.
+
+D. ASSISTANCE OPPORTUNITIES
+
+Show sourced candidate assistance programs.
+
+Mark eligibility as:
+- Possibly eligible
+- More information required
+- Not matched under known rules
+
+Never promise approval.
+
+Do not present the tool as a lender.
+
+E. DEMO HOUSEHOLD
+
+Provide default fictional inputs so this screen works immediately.
+
+Clearly mark all fictional data as synthetic.
+
+============================================================
+11. FEATURE 5 — EMPLOYER DASHBOARD
+============================================================
+
+PURPOSE:
+Demonstrate employer-supported workforce housing.
+
+An employer may help employees live closer to work by contributing to an affordable housing development or providing homeownership assistance through suitable partners.
+
+IMPLEMENT:
+
+A. EMPLOYER OVERVIEW
+
+Display:
+- Supported housing project
+- Project financing gap
+- Current employer commitments
+- Possible number of homes supported
+
+Do not invent verified employee-retention savings or commute reductions.
+
+B. EMPLOYER FUNDING SIMULATOR
+
+Allow employers to enter contribution amounts.
+
+Example:
+$40,000 employer contribution.
+
+Calculate the revised funding scenario.
+
+C. MULTI-EMPLOYER CONSORTIUM
+
+Implement a simple dynamic contribution form.
+
+Example synthetic employers:
+- Employer A
+- Employer B
+- Employer C
+
+Allow users to:
+- Add a demo employer
+- Set contribution amount
+- Remove an employer
+- Calculate the combined contribution
+
+Send the calculations to FastAPI.
+
+D. EMPLOYER CONTRIBUTION IMPACT
+
+Display:
+- Total employer contribution
+- Percentage of funding gap covered
+- Remaining gap
+- Combined employer + donor scenario
+
+E. WORKFORCE HOUSING EXPLANATION
+
+Include a small explanation of employer-sponsored housing.
+
+Do not claim an employer's contribution guarantees employee retention.
+
+Do not implement employment-linked housing eligibility restrictions.
+
+============================================================
+12. FEATURE 6 — FUNDING SOURCE MATCHING
+============================================================
+
+Create a small funding source database.
+
+Prefer official sources from:
+
+lanes/3-fund-it/data/DATA-SOURCES.md
+
+Potential categories:
+- CalHome
+- HOME
+- Local homebuyer assistance
+- Community Development Block Grant
+- FHLBank programs
+- Philanthropic donations
+- Employer housing contributions
+
+Use actual source URLs only when present in the challenge repository or otherwise verified.
+
+Each record should include:
+
+id
+name
+provider
+category
+description
+source_url
+last_verified
+verification_status
+availability_status
+eligibility_notes
+restrictions
+eligible_project_types
+maximum_funding_if_verified
+synthetic
+
+IMPORTANT:
+
+Do NOT invent grant award amounts.
+
+Do NOT invent application deadlines.
+
+Do NOT claim applications are open without evidence.
+
+If availability is unknown, show "Availability not confirmed."
+
+Implement a straightforward rule-based matching algorithm:
+
+- Compare project type against funding program type.
+- Compare known geographic restrictions.
+- Compare known eligibility attributes.
+- Exclude clearly incompatible programs.
+- Rank candidate programs by relevance.
+- Explain unresolved eligibility checks.
+
+Treat unknown requirements as unknown, not automatically satisfied.
+
+AI may explain matches but should not invent eligibility.
+
+============================================================
+13. FEATURE 7 — AI INTEGRATION
+============================================================
+
+Integrate the Anthropic Python SDK.
+
+Use the ANTHROPIC_API_KEY environment variable.
+
+Allow ANTHROPIC_MODEL to be configured.
+
+Choose a current supported model according to the installed SDK/documentation.
+
+AI FEATURES:
+
+A. Funding Strategy Generator
+B. Financial Summary Generator
+C. Donor Impact Explanation
+D. Funding Eligibility Explanation
+
+Only call Claude from the backend.
+
+Never expose the API key in frontend code.
+
+Never commit the API key.
+
+The AI must receive structured project information calculated by the backend.
+
+The AI should return:
+- Summary
+- Potential funding opportunities
+- Rationale
+- Assumptions
+- Missing information
+- Risks
+- Recommended next steps
+
+The AI must:
+- Avoid inventing funding amounts.
+- Avoid claiming financing is secured.
+- Distinguish actual and hypothetical inputs.
+- Cite only source URLs supplied to it.
+- State when eligibility is unknown.
+- Not provide definitive legal, tax, or lending advice.
+
+FALLBACK:
+
+If the API key is missing or the API fails:
+- The application should NOT crash.
+- Return a useful rule-based report generated from actual backend figures.
+- Set a field such as generation_mode = "rule_based".
+- Display "Rule-based analysis" on the frontend.
+
+If Claude succeeds:
+generation_mode = "claude".
+
+A judge should be able to use the application without supplying an API key.
+
+============================================================
+14. FASTAPI BACKEND REQUIREMENTS
+============================================================
+
+Build a real functioning REST API.
+
+Required endpoints:
+
+GET /health
+
+Returns:
+- status
+- application
+- version
+
+GET /api/projects
+
+Returns all demo projects.
+
+GET /api/projects/{project_id}
+
+Returns project details and funding information.
+
+POST /api/finance/calculate
+
+Accepts financial inputs and returns:
+- total_cost
+- existing_funding
+- initial_gap
+- confirmed_additional_funding
+- secured_gap
+- proposed_additional_funding
+- scenario_gap
+- funding_surplus
+- funding_coverage_percentage
+
+POST /api/finance/rate-sensitivity
+
+Accepts:
+- Baseline purchase price
+- Baseline rate
+- New rate
+- Loan term
+- Down-payment percentage
+- Existing project financing values
+
+Returns:
+- Baseline monthly mortgage payment
+- New affordable purchase price at fixed payment capacity
+- Change in purchase price
+- Original funding gap
+- Revised funding gap
+- Funding gap change
+
+Document the assumptions behind holding payment capacity constant.
+
+POST /api/finance/affordability
+
+Accepts buyer financial inputs and calculates mortgage affordability.
+
+GET /api/funding-programs
+
+Returns sourced candidate programs.
+
+GET /api/projects/{project_id}/contributions
+
+Returns contribution records.
+
+POST /api/projects/{project_id}/contributions
+
+Creates a proposed demo pledge/contribution.
+
+PATCH /api/projects/{project_id}/contributions/{contribution_id}
+
+Allows an explicit demo status change, subject to validation.
+
+POST /api/ai/funding-strategy
+
+Returns either a Claude-generated or rule-based funding strategy.
+
+You may add endpoints where useful.
+
+Implement:
+- Pydantic request validation
+- Appropriate status codes
+- CORS for localhost frontend
+- Clean response schemas
+- Error handling
+- API documentation at /docs
+- Decimal-based handling or properly controlled monetary arithmetic
+- SQLite database initialization
+- Data seeding
+
+Never allow:
+- Negative costs
+- Negative contributions
+- Invalid percentages
+- Invalid loan terms
+- Unauthorized status transitions in the demo model
+
+Use descriptive error messages.
+
+============================================================
+15. FINANCIAL ENGINE REQUIREMENTS
+============================================================
+
+This part is critical.
+
+Implement financial formulas as pure Python functions with unit tests.
+
+A. TOTAL COST
+
+total_cost = sum(project_cost_items)
+
+B. INITIAL GAP
+
+initial_gap = max(
+    0,
+    total_cost
+    - affordable_buyer_price
+    - existing_subsidies
+    - earned_revenue
+)
+
+C. SECURED GAP
+
+secured_gap = max(
+    0,
+    initial_gap
+    - confirmed_additional_funding
+)
+
+D. SIMULATED GAP
+
+scenario_gap = max(
+    0,
+    secured_gap
+    - proposed_additional_funding
+)
+
+E. SURPLUS
+
+If proposed or confirmed funding exceeds the gap, report surplus separately.
+
+Do not display negative remaining funding as an additional need.
+
+F. MONTHLY MORTGAGE PAYMENT
+
+For monthly rate r, principal P and payment count n:
+
+payment = P * r * (1+r)^n / ((1+r)^n - 1)
+
+When r = 0:
+payment = P / n
+
+Use interest-rate percentages correctly.
+
+G. MAXIMUM LOAN PRINCIPAL
+
+Calculate the inverse of the mortgage payment formula using a fixed monthly principal-and-interest budget.
+
+Subtract estimated non-mortgage housing expenses before computing loan capacity.
+
+Handle zero or insufficient budget safely.
+
+H. RATE SENSITIVITY
+
+For the example rate analysis:
+- Start from an assumed baseline affordable purchase price.
+- Calculate the mortgage payment using the baseline rate.
+- Hold that payment capacity constant.
+- Recompute the affordable mortgage principal using the new rate.
+- Recalculate affordable purchase price.
+- Recalculate the project gap.
+
+Assume down-payment percentage and non-mortgage costs remain fixed unless explicitly changed.
+
+Label this as an illustrative scenario model.
+
+I. FUNDING RESTRICTIONS
+
+Do not treat a repayable loan as an unconditional grant.
+
+Do not add unverified program funding to confirmed funds.
+
+Do not double-count buyer down-payment assistance as both developer subsidy and buyer purchase price.
+
+Use clear financing categories.
+
+============================================================
+16. DATABASE AND INITIAL DATA
+============================================================
+
+Use SQLite.
+
+Implement database tables/models for:
+
+Project
+ProjectCostItem
+FundingProgram
+Contribution
+
+Optionally:
+DemoOrganization
+ProjectMilestone
+
+Projects should have:
+- ID
+- Name
+- Description
+- Location label
+- Housing type
+- Number of units
+- Status
+- Affordable purchase price
+- Existing subsidies
+- Earned revenue
+
+Contributions should have:
+- ID
+- Project ID
+- Contributor display name
+- Contributor type
+- Amount
+- Funding category
+- Status
+- Created timestamp
+
+Allowed statuses:
+- proposed
+- applied
+- committed
+- disbursed
+
+Only committed/disbursed records may count toward secured funding, without counting the same money twice.
+
+Seed:
+1. Synthetic Affordable Home
+2. Its four cost components
+3. Existing financial sources
+4. A few sourced candidate funding programs
+5. Optional clearly synthetic sample organizations
+
+The database must initialize automatically on first application startup.
+
+Seeding must be idempotent.
+
+Do not duplicate seed records every time the server restarts.
+
+============================================================
+17. FRONTEND AND BACKEND INTEGRATION
+============================================================
+
+ALL core financial calculations must be performed by FastAPI.
+
+The frontend should call the API.
+
+Do not hardcode calculated results into the components.
+
+Create:
+
+frontend/lib/api.ts
+
+Use typed functions such as:
+
+getProjects()
+getProject(id)
+calculateFundingGap(data)
+calculateAffordability(data)
+calculateRateSensitivity(data)
+getFundingPrograms()
+getContributions(projectId)
+createContribution(projectId, data)
+updateContributionStatus(...)
+generateFundingStrategy(data)
+
+Use TypeScript interfaces for request and response types.
+
+Configure the backend URL using:
+
+NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
+
+Provide:
+- Loading indicators
+- Error messages
+- Empty states
+- Success feedback
+- Responsive layouts
+
+The default demo must work without logging in.
+
+Don't leave buttons unconnected.
+
+Don't add an interactive feature unless it performs the advertised action.
+
+============================================================
+18. IMPORTANT DEMO USER FLOW
+============================================================
+
+The live demo should tell a clear story.
+
+STEP 1:
+Open NestFlix.
+
+Show:
+"Affordable housing funding, simplified."
+
+STEP 2:
+Click "Explore Demo Project."
+
+STEP 3:
+Open Builder Dashboard.
+
+See:
+Total cost = $535,000
+Existing financing = $440,000
+Initial gap = $95,000
+
+STEP 4:
+Click "Find Funding Opportunities."
+
+Display candidate funding programs, restrictions, and source links.
+
+STEP 5:
+Open Donor Dashboard.
+
+Enter:
+$25,000 contribution.
+
+Show:
+Scenario remaining gap = $70,000.
+
+Save this as a demo pledge.
+
+It remains proposed until explicitly confirmed.
+
+STEP 6:
+Open Employer Dashboard.
+
+Enter:
+$40,000 employer contribution.
+
+Show updated combined scenario.
+
+STEP 7:
+Add:
+$30,000 additional hypothetical grant.
+
+Show:
+Total proposed funding = $95,000.
+Scenario remaining gap = $0.
+
+Display:
+"Scenario fully funded — commitments and eligibility still require verification."
+
+STEP 8:
+Open Buyer Dashboard.
+
+Change mortgage interest rate.
+
+Show:
+- Revised affordable purchase price
+- Revised development funding gap
+- Impact of increased mortgage costs
+
+STEP 9:
+Generate a Funding Strategy Report.
+
+Show:
+- Project financing summary
+- Proposed funding stack
+- Remaining secured gap
+- Scenario gap
+- Risks
+- Source links
+- Recommended actions
+
+This entire workflow MUST function with the backend running.
+
+============================================================
+19. DOCUMENTATION AND SOURCES
+============================================================
+
+For the hackathon, transparency matters.
+
+Create a simple "Sources & Assumptions" section accessible from the dashboard.
+
+Include:
+- Synthetic example deal attribution
+- Official source URLs
+- Source verification dates
+- Which figures are assumptions
+- Which program details are unknown
+- Which calculations are derived
+
+Important distinctions:
+
+REAL:
+- Working calculations
+- Working API
+- Local persistence
+- Sourced funding-program descriptions, where verified
+
+SYNTHETIC:
+- Demo project
+- Demo household
+- Demo contributions
+- Demo employers
+- Unverified example scenarios
+
+UNKNOWN:
+- Actual grant availability
+- Whether real financing is approved
+- Real household eligibility unless verified
+- Actual project completion costs
+
+Never hide these distinctions.
+
+Display:
+"Prototype for educational and planning purposes. Not legal, tax, financial, or lending advice."
+
+Do not send real emails, file applications, transfer money, or communicate with real agencies.
+
+============================================================
+20. TESTING REQUIREMENTS
+============================================================
+
+Write meaningful automated tests.
+
+MANDATORY TEST CASES:
+
+1. Total project cost equals $535,000.
+
+2. Existing funding equals $440,000.
+
+3. Initial gap equals $95,000.
+
+4. A proposed $25,000 contribution produces a scenario gap of $70,000.
+
+5. A proposed contribution does not reduce the secured gap.
+
+6. Proposed funding of:
+   $25,000 donor
+   $40,000 employer
+   $30,000 grant
+   produces a scenario gap of $0.
+
+7. Funding above the requirement produces a surplus, not a negative gap.
+
+8. Increasing mortgage interest rates decreases affordable purchase price, with fixed payment capacity.
+
+9. Decreasing mortgage interest rates increases affordable purchase price, with fixed payment capacity.
+
+10. Zero-interest mortgage calculations work.
+
+11. Negative contribution amounts are rejected.
+
+12. Invalid project IDs return suitable errors.
+
+13. GET /health works.
+
+14. GET /api/projects returns the seeded project.
+
+15. POST /api/finance/calculate returns correct data.
+
+16. API works when ANTHROPIC_API_KEY is absent.
+
+17. Seed data is not duplicated on restart.
+
+Also run:
+- Backend pytest
+- Frontend TypeScript checks
+- Frontend build
+- Basic API smoke tests
+
+Fix errors.
+
+Do not leave compilation errors or broken imports.
+
+============================================================
+21. EXECUTION PLAN
+============================================================
+
+You must ACTUALLY BUILD THE APPLICATION.
+
+Follow this sequence.
+
+PHASE 1 — FOUNDATION
+
+1. Inspect repository.
+2. Confirm stack.
+3. Create frontend project.
+4. Create FastAPI backend.
+5. Add requirements and configuration.
+6. Implement SQLite initialization.
+7. Add seed data.
+8. Implement /health.
+9. Verify backend starts.
+
+PHASE 2 — CORE FINANCIAL ENGINE
+
+1. Implement financial formulas.
+2. Implement endpoints.
+3. Add tests.
+4. Confirm expected $95,000 gap.
+5. Verify API via HTTP requests.
+
+PHASE 3 — PRIMARY DASHBOARD
+
+1. Implement layout/navigation.
+2. Implement builder project dashboard.
+3. Connect project API.
+4. Display financial charts.
+5. Implement interactive gap calculator.
+6. Confirm calculations update.
+
+PHASE 4 — OTHER STAKEHOLDERS
+
+1. Donor Dashboard.
+2. Employer Dashboard.
+3. Buyer Dashboard.
+4. Shared contribution scenarios.
+5. Verify cross-dashboard updates.
+
+PHASE 5 — AI AND MATCHING
+
+1. Add source-backed funding records.
+2. Implement funding matching.
+3. Integrate optional Claude API.
+4. Implement rule-based fallback.
+5. Add funding strategy report.
+
+PHASE 6 — POLISH AND DELIVERY
+
+1. Improve visuals.
+2. Add responsive styling.
+3. Add loading/error states.
+4. Verify buttons and forms.
+5. Run tests.
+6. Fix discovered issues.
+7. Update README.
+8. Write short demo instructions.
+
+After every major phase, verify the code still works.
+
+If time is constrained, stop adding new features and stabilize what already exists.
+
+Do not sacrifice the working financial engine to build optional features.
+
+============================================================
+22. RUNNING THE PROJECT
+============================================================
+
+The project must support running in two terminals.
+
+BACKEND:
+
+cd backend
+
+python -m venv .venv
+
+Activate the virtual environment for the operating system.
+
+pip install -r requirements.txt
+
+uvicorn app.main:app --reload --port 8000
+
+Backend available at:
+http://localhost:8000
+
+API docs:
+http://localhost:8000/docs
+
+FRONTEND:
+
+cd frontend
+
+npm install
+
+npm run dev
+
+Frontend:
+http://localhost:3000
+
+Create all necessary scripts/configuration for these commands to work.
+
+Add .env.example files.
+
+Do not include real credentials.
+
+The app must work without external services.
+
+============================================================
+23. README REQUIREMENTS
+============================================================
+
+Create a professional README containing:
+
+1. Project name and tagline
+2. Problem statement
+3. Who the primary user is
+4. Solution overview
+5. Four stakeholder portals
+6. Major working features
+7. Architecture
+8. Tech stack
+9. Folder structure
+10. Prerequisites
+11. Exact setup commands
+12. Environment variables
+13. Backend API documentation
+14. Demo instructions
+15. Sources and assumptions
+16. What is real versus mocked
+17. Known limitations
+18. Future improvements
+19. How Claude is used
+20. Privacy and safety statement
+
+Include a short section:
+
+"30-Second Demo Script"
+
+Example:
+
+"Affordable housing projects often face a large funding shortfall. NestFlix turns that shortfall into an actionable financing plan. This synthetic Orange County home costs $535,000, leaving a $95,000 gap. Our platform helps explore donor, employer, and grant funding, shows how proposed contributions could close the gap, and calculates how interest-rate changes affect affordability. It also documents assumptions, funding restrictions, and the difference between proposed and secured money."
+
+Include instructions for recording a demo video.
+
+============================================================
+24. SECURITY AND PRODUCT SAFETY
+============================================================
+
+For the hackathon:
+- Use synthetic household data only.
+- Don't collect real resident information.
+- Don't hardcode API secrets.
+- Don't commit .env files.
+- Use input validation.
+- Do not execute arbitrary uploaded content.
+- Do not scrape government sites at scale.
+- Do not perform transactions.
+- Do not approve loans.
+- Do not promise grant eligibility.
+- Do not guarantee tax deductions.
+- Do not treat AI output as financial authority.
+
+If a value is missing:
+Show "Unknown" or a clearly labeled assumption.
+
+If a funding source is unverified:
+Label it as a potential lead.
+
+If AI is unavailable:
+Use deterministic fallback logic.
+
+If external services fail:
+Core demo functionality must continue working.
+
+============================================================
+25. DEFINITION OF DONE
+============================================================
+
+The project is DONE only when:
+
+[ ] The backend starts successfully.
+[ ] The frontend starts successfully.
+[ ] The homepage renders.
+[ ] Navigation works.
+[ ] The demo project loads from FastAPI.
+[ ] The financial engine calculates $95,000 correctly.
+[ ] The builder dashboard works.
+[ ] The donor simulator works.
+[ ] The employer simulator works.
+[ ] The buyer affordability calculator works.
+[ ] Mortgage rate sensitivity works.
+[ ] Financial charts reflect actual calculation results.
+[ ] The funding strategy produces a response.
+[ ] The app works without an Anthropic API key.
+[ ] Contribution scenarios are clearly labeled.
+[ ] Sources and assumptions are visible.
+[ ] Python tests pass.
+[ ] TypeScript checks pass.
+[ ] Frontend build succeeds.
+[ ] There are no dead buttons in the main demo flow.
+[ ] The README contains exact run instructions.
+
+If optional features are unfinished, document them honestly.
+
+============================================================
+26. EXPECTED BEHAVIOR FROM YOU
+============================================================
+
+Act like the technical lead responsible for getting this project ready for a live hackathon demonstration.
+
+Do not merely suggest files.
+
+CREATE THEM.
+
+Do not just describe architecture.
+
+IMPLEMENT IT.
+
+Do not stop at partially completed frontend mockups.
+
+CONNECT THE FRONTEND TO FASTAPI.
+
+Do not stop because an AI API key is unavailable.
+
+IMPLEMENT THE FALLBACK.
+
+Do not spend excessive time researching optional frameworks.
+
+USE THE SPECIFIED STACK.
+
+Do not overengineer.
+
+Use simple, maintainable, readable code.
+
+Do not introduce microservices.
+
+Do not create complex infrastructure.
+
+Keep the project demo-friendly.
+
+When running commands:
+- Use the tools and terminal available to you.
+- Install dependencies if needed and permitted.
+- Run checks after implementation.
+- Fix failures.
+- Do not claim success for commands you have not run.
+
+Keep the primary experience centered on a nonprofit housing finance lead.
+
+Demonstrate the full connection:
+
+BUILDER
+    ↓
+FINANCIAL GAP
+    ↓
+FUNDING OPPORTUNITIES
+    ↓
+DONOR + EMPLOYER CONTRIBUTIONS
+    ↓
+RECALCULATED FUNDING GAP
+    ↓
+BUYER RATE SENSITIVITY
+    ↓
+FUNDING STRATEGY AND IMPACT REPORT
+
+At completion, provide:
+
+1. Summary of what you built.
+2. Actual folder structure.
+3. Working features.
+4. Exact backend start command.
+5. Exact frontend start command.
+6. Test results and any checks you could not run.
+7. Known limitations.
+8. Steps to demonstrate the application.
+
+IMPORTANT FINAL INSTRUCTION:
+
+START BUILDING NOW.
+
+First inspect the workspace, then create the code and execute the implementation plan.
+
+Do not wait for my approval after each phase.
+
+Make pragmatic decisions and proceed.
+
+Your ultimate objective is a POLISHED, FUNCTIONAL, END-TO-END NESTFLIX HACKATHON DEMO, not a theoretical software design.
+
+```
+
+One important recommendation: use Copilot's Agent Mode rather than Ask Mode so it can create files, execute terminal commands, and fix errors. Open the project root folder before pasting the prompt, and approve its file edits and terminal operations as appropriate.
+
+The three features I'd protect above everything else are the $95,000 funding-gap calculator, donor/employer contribution simulator, and mortgage-rate sensitivity analysis. Those tell the complete story the Fund It judges want to see, even if some secondary features remain unfinished.
