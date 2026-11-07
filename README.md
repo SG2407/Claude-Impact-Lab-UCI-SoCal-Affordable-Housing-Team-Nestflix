@@ -136,9 +136,9 @@ docs/
   background.md        the $0 equation and the laws, in two pages
   glossary.md          the terms you will hear
 lanes/
-  1-find-it/     problem, ideas, data/DATA-SOURCES.md
-  2-clear-it/    problem, ideas, data/DATA-SOURCES.md
-  3-fund-it/     problem, ideas, data/DATA-SOURCES.md, a synthetic example deal
+  1-find-it/     problem, ideas, scenarios.json, data/ (DATA-SOURCES.md, pathways.json)
+  2-clear-it/    problem, ideas, scenarios.json, data/ (DATA-SOURCES.md, oc-cities.json, timeline.json)
+  3-fund-it/     problem, ideas, scenarios.json, data/ (DATA-SOURCES.md, synthetic-example-deal.json)
 templates/TEAM-README.md          the README your team's repo needs
 ```
 

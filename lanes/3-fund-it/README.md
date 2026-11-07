@@ -55,6 +55,9 @@ Each one comes from a place the money breaks today. Build something else if you 
 See [`data/DATA-SOURCES.md`](data/DATA-SOURCES.md): income limits, rates and costs, market prices,
 funding programs, land trusts and donor sources, each marked VERIFIED or UNVERIFIED.
 
+Also here: [`scenarios.json`](scenarios.json), three made-up users (a finance lead, a rate change,
+a donor) to test against the example deal.
+
 There is also a made-up example deal for testing:
 [`data/synthetic-example-deal.json`](data/synthetic-example-deal.json). It is the same one-home
 bill as the worked example in [background](../../docs/background.md): $535k to create, $285k the

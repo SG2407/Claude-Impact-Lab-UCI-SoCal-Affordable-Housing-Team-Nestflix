@@ -61,6 +61,10 @@ Each one comes from a place the data breaks today. Build something else if you l
 See [`data/DATA-SOURCES.md`](data/DATA-SOURCES.md): parcels, zoning, housing-element sites,
 surplus land, constraints and statute text, each marked VERIFIED or UNVERIFIED.
 
+Also here: [`data/pathways.json`](data/pathways.json), the five land pathways from the brief with
+official sources, and [`scenarios.json`](scenarios.json), three made-up users to design and test
+against.
+
 Rules for everyone are in [ground rules](../../docs/ground-rules.md). Background is in
 [background](../../docs/background.md) and the [glossary](../../docs/glossary.md).
 

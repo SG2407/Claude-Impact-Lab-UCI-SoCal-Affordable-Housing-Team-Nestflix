@@ -52,6 +52,11 @@ See `docs/background.md` and each lane's README under `lanes/`.
   confirmed: treat them as leads, not facts.
 - `lanes/3-fund-it/data/synthetic-example-deal.json`: a made-up deal for testing. Every number is
   an assumption. Never present it as real.
+- `lanes/*/scenarios.json`: made-up users for each lane to design and test against. Not real people.
+- `lanes/1-find-it/data/pathways.json`, `lanes/2-clear-it/data/oc-cities.json` and
+  `timeline.json`: starter lists. A summary is not the rule: read the linked source. Empty fields
+  are for the team to fill, with a source and date.
+- `docs/challenge-brief.pdf`: the 3-page brief.
 - `templates/TEAM-README.md`: what the team's README must cover before they submit.
 
 ## How to work today

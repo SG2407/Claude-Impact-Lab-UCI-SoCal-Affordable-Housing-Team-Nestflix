@@ -58,6 +58,11 @@ See [`data/DATA-SOURCES.md`](data/DATA-SOURCES.md): state law text, HCD guidance
 and progress-report data, city pages, and factory-built housing, each marked VERIFIED or
 UNVERIFIED. Read its "statute numbers changed" note first.
 
+Also here: [`data/oc-cities.json`](data/oc-cities.json), the 34 Orange County cities with empty
+fields for each city's permit page, ADU checklist and fees (filling them is part of the work);
+[`data/timeline.json`](data/timeline.json), the four-year baseline and the other delays; and
+[`scenarios.json`](scenarios.json), three made-up users to design and test against.
+
 Rules for everyone are in [ground rules](../../docs/ground-rules.md). Background is in
 [background](../../docs/background.md) and the [glossary](../../docs/glossary.md).
 
