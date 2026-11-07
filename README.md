@@ -9,6 +9,8 @@ figures per home. Small teams build a working prototype with Claude that helps c
 Organized by Claude Community Orange County with the UCI Center for Real Estate. Sponsor: EyeOn
 Automations.
 
+**The challenge brief** (3 pages: the $0 equation, the three lanes, a worked example, judging): [docs/challenge-brief.pdf](docs/challenge-brief.pdf).
+
 **First hackathon?** You do not need a team, an idea or coding experience to start. Read
 [your first hackathon](docs/first-hackathon.md). Two minutes.
 
@@ -129,6 +131,7 @@ docs/
   getting-started.md   get the files, set up Claude
   ground-rules.md      the rules in full
   submission.md        what to hand in and how
+  challenge-brief.pdf  the 3-page brief handed out at kickoff
   judging.md           how winners are picked
   background.md        the $0 equation and the laws, in two pages
   glossary.md          the terms you will hear
