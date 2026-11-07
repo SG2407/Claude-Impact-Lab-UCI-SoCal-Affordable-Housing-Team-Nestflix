@@ -10,6 +10,7 @@ Organized by Claude Community Orange County with the UCI Center for Real Estate.
 Automations.
 
 **The challenge brief** (3 pages: the $0 equation, the three lanes, a worked example, judging): [docs/challenge-brief.pdf](docs/challenge-brief.pdf).
+The kickoff slides: [docs/kickoff-slides.pdf](docs/kickoff-slides.pdf).
 
 **First hackathon?** You do not need a team, an idea or coding experience to start. Read
 [your first hackathon](docs/first-hackathon.md). Two minutes.
@@ -132,6 +133,7 @@ docs/
   ground-rules.md      the rules in full
   submission.md        what to hand in and how
   challenge-brief.pdf  the 3-page brief handed out at kickoff
+  kickoff-slides.pdf   the slides from the morning kickoff
   judging.md           how winners are picked
   background.md        the $0 equation and the laws, in two pages
   glossary.md          the terms you will hear
