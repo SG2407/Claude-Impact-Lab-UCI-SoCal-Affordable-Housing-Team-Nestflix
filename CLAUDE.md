@@ -60,7 +60,7 @@ See `docs/background.md` and each lane's README under `lanes/`.
   what they decide, and get something working early.
 - A live demo is required for finalists. A working rough tool beats a polished pitch. Keep a
   runnable version at all times.
-- Judges score four equal areas: **Impact** (a real user would adopt it and be better off),
+- Judges score four equal areas: **Impact** (a nonprofit or city would use it next month to help get homes built),
   **Works** (live demo on real data, sources shown), **Scale** (a believable path to the next 100
   projects) and **Innovation** (a new way to see or solve the problem). Ties go to Impact. Build
   sources in from the start, not at the end, and favor a believable path over a big claim.

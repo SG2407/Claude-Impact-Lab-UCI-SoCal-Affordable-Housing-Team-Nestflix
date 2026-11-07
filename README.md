@@ -102,7 +102,7 @@ finalist is scored from 1 to 5 in four areas. The areas have equal weight.
 
 | Area | The question |
 |---|---|
-| **Impact** | Would a real user adopt it and be better off? |
+| **Impact** | Would a nonprofit or city use it next month to help get homes built? |
 | **Works** | Does the live demo run on real data, with sources shown? Working beats polished |
 | **Scale** | Is there a believable path to the next 100 projects? |
 | **Innovation** | Is it a new way to see or solve the problem? |
