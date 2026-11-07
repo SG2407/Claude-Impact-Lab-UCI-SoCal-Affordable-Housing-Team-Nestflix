@@ -3,6 +3,9 @@
 Starting points for income limits, rates and costs, market prices, funding programs, land trusts
 and donor sources. Checked November 6, 2026.
 
+**These are a few places to start.** There's much more out there, and the best teams find sources
+nobody else used.
+
 **Status key.** VERIFIED means fetched and loaded, and the content matches the claim. UNVERIFIED
 means it could not be confirmed, with the reason given. Anything UNVERIFIED is a lead, not a fact.
 Some sites block automated fetches (403). Those opened through another tool and should open in a
@@ -156,8 +159,9 @@ Code 50052.5 plus the Freddie Mac rate series.
 
 ## A made-up deal for testing
 
-[`synthetic-example-deal.json`](synthetic-example-deal.json) is a six-home example. It is
-**SYNTHETIC**: not a real project, program, city or buyer. Every number is an **ASSUMPTION**,
-chosen so the arithmetic is easy to check (cost per home, what the buyer can support, the gap, four
-placeholder sources and the gap that remains). Use it to test your tool's math. Never cite it as a
+[`synthetic-example-deal.json`](synthetic-example-deal.json) is a one-home example, the same bill
+as the worked example in the background doc and the challenge brief. It is **SYNTHETIC**: not a
+real project, program, city or buyer. Every number is a rounded **ASSUMPTION** (cost to create by
+line, what the family can pay, subsidies, earned income and the fundraising gap, balancing to $0).
+Use it to test your tool's math. Never cite it as a
 benchmark or show it as real.

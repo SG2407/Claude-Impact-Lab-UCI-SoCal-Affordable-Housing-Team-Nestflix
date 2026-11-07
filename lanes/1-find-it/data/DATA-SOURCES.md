@@ -3,6 +3,9 @@
 Starting points for parcels, zoning, housing-element sites, surplus land, constraints and statute
 text. Checked November 6, 2026 by fetching the page or calling the service.
 
+**These are a few places to start.** There's much more out there, and the best teams find sources
+nobody else used.
+
 **Status key.** VERIFIED means fetched, and the contents matched the claim. UNVERIFIED means it
 could not be confirmed, with the reason given. Anything UNVERIFIED is a lead, not a fact. Terms and
 data change, so read the source yourself before you build on it. Be kind to public servers: cache

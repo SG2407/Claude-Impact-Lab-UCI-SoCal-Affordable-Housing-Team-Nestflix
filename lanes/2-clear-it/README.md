@@ -12,11 +12,15 @@ years:
 - start on land that is already zoned correctly
 - get a **ministerial** approval: if you meet the written rules, the city must say yes, with no
   hearing and no discretion
-- use state-approved modular plans
+- use state-approved plans
 
 The obstacle is finding that path. Every one of Orange County's 34 cities has its own forms, fees
 and checklists. City forms sometimes misread state law, and the state housing department (HCD)
 regularly issues letters telling cities they got it wrong.
+
+And approval is only one delay. Projects also wait on plan-check corrections, utility and fire
+sign-offs, funding rounds that open once a year, condo map paperwork and relocating tenants. Every
+month of waiting costs money.
 
 ## Who is stuck
 

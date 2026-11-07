@@ -18,6 +18,26 @@ Nonprofits that build affordable ownership homes do exist. So do community land 
 communities with land, employers trying to house their own workforce, and city housing offices.
 They all face the same equation. In OC, the cost side usually wins by six figures per home.
 
+How the lanes map onto it: the family's share is fixed by income. **Lane 1 (Find it)** lowers the
+cost of land. **Lane 2 (Clear it)** lowers the cost of time. **Lane 3 (Fund it)** grows subsidies
+and fundraising to close the gap that's left.
+
+### Worked example: one home's bill
+
+Mock numbers, rounded, based on a typical project. Not a real deal.
+
+| Cost to create | | Paid by | |
+|---|---|---|---|
+| Land and building purchase (Lane 1) | $360k | Family's price (fixed by income) | $285k |
+| Time costs while waiting: loan interest, taxes, insurance, management (Lane 2) | $85k | Public subsidies (Lane 3) | $100k |
+| Construction and repairs | $40k | Rent earned while waiting (Lane 3) | $55k |
+| Fees, design, legal, sales | $50k | **Fundraising: the gap (Lane 3)** | **$95k** |
+| **Total** | **$535k** | **Total** | **$535k** |
+
+Paid by − cost to create = $0. When this project's schedule slipped 10 months, the fundraising it
+needed grew about 7 times. Time is money on both sides of the equation. The same example is in
+[`lanes/3-fund-it/data/synthetic-example-deal.json`](../lanes/3-fund-it/data/synthetic-example-deal.json).
+
 ## Why there is a gap
 
 Price is set by the market. What a buyer can pay is set by income. Affordable housing is usually
@@ -26,7 +46,7 @@ cannot rise to cover cost. California's definition of affordable housing cost fo
 category, is in [Health and Safety Code 50052.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=50052.5).
 
 The difference between cost and what the buyer can pay is the gap. It gets filled from many
-sources: city and state programs, down-payment programs, lenders, employers, donors and earned
+sources: city, state and federal programs, down-payment programs, lenders, employers, donors and earned
 revenue such as donated-goods resale. Today that stack gets assembled by hand, one project at a
 time. That is Lane 3.
 
@@ -52,7 +72,7 @@ Builders who have done it describe a path that can cut this to about two years:
 1. Start on land that is already zoned correctly.
 2. Get a **ministerial** approval. If you meet the written rules, the city must say yes, with no
    hearing and no discretion.
-3. Use state-approved modular plans.
+3. Use state-approved plans.
 
 The obstacle is finding that path. Every one of OC's 34 cities has its own forms, fees and
 checklists. City forms sometimes misread state law, and the state housing department (HCD)

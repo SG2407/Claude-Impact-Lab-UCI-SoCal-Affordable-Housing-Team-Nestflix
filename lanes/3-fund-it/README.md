@@ -12,7 +12,7 @@ pencils on its own. The family's price is capped by income: housing costs should
 
 The gap gets filled from many sources:
 
-- city and state programs (CalHome, HOME, local housing funds)
+- city, state and federal programs (CalHome, HOME, local housing funds)
 - down-payment programs
 - lenders
 - employers
@@ -56,8 +56,10 @@ See [`data/DATA-SOURCES.md`](data/DATA-SOURCES.md): income limits, rates and cos
 funding programs, land trusts and donor sources, each marked VERIFIED or UNVERIFIED.
 
 There is also a made-up example deal for testing:
-[`data/synthetic-example-deal.json`](data/synthetic-example-deal.json). It is synthetic. Every
-number in it is an assumption. Do not cite it as a benchmark.
+[`data/synthetic-example-deal.json`](data/synthetic-example-deal.json). It is the same one-home
+bill as the worked example in [background](../../docs/background.md): $535k to create, $285k the
+family can pay, a $95k fundraising gap. It is synthetic. Every number in it is an assumption. Do
+not cite it as a benchmark.
 
 Rules for everyone are in [ground rules](../../docs/ground-rules.md). Background is in
 [background](../../docs/background.md) and the [glossary](../../docs/glossary.md).

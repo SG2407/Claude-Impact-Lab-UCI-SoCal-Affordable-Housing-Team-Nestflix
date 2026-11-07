@@ -12,12 +12,12 @@ Every affordable ownership home has to balance one equation:
 > What the family can afford to pay + public subsidies + fundraising − the cost to create the home = $0
 
 In Orange County the cost side usually wins by six figures per home, and a home takes about four
-years from finding land to handing over keys. The three lanes are the three places the equation
-breaks:
+years from finding land to handing over keys. The family's share is fixed by income. Lanes 1 and 2
+shrink the cost; Lane 3 closes the gap that's left:
 
-1. **Find it.** Where can the next affordable home go?
-2. **Clear it.** How do we turn four years into two?
-3. **Fund it.** Does it pencil, and who closes the gap?
+1. **Find it** (the cost of land). Where can the next affordable home go?
+2. **Clear it** (the cost of time). How do we turn four years into two?
+3. **Fund it** (subsidies and fundraising). Does it pencil, and who closes the gap?
 
 See `docs/background.md` and each lane's README under `lanes/`.
 
@@ -60,8 +60,10 @@ See `docs/background.md` and each lane's README under `lanes/`.
   what they decide, and get something working early.
 - A live demo is required for finalists. A working rough tool beats a polished pitch. Keep a
   runnable version at all times.
-- Judges score Impact, Works, Rigor and Creativity. Rigor means sources and assumptions are
-  shown. Build that in from the start, not at the end.
+- Judges score four equal areas: **Impact** (a real user would adopt it and be better off),
+  **Works** (live demo on real data, sources shown), **Scale** (a believable path to the next 100
+  projects) and **Innovation** (a new way to see or solve the problem). Ties go to Impact. Build
+  sources in from the start, not at the end, and favor a believable path over a big claim.
 - When two sources disagree, or a source looks out of date, show that to the user. Do not pick
   silently. Laws get renumbered and income limits get revised mid-year.
 - Say "unknown" when it is unknown. A confident wrong answer is the worst outcome here.

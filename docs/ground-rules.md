@@ -3,18 +3,18 @@
 Affordable housing decisions change real families' lives. These rules keep your work honest and
 keep people safe.
 
-## The five rules
+## Before you build
 
-1. **Name one real user** and show their before and after. A nonprofit finance lead, a permit tech,
-   a congregation with a lot, a first-time buyer. Say who, and show what changes for them.
-2. **Live demo.** Show what you built working, not just slides. A working rough tool beats a
-   polished pitch. Finalists must demo live.
-3. **Show your sources.** Cite the law, the dataset or the assumption. If you made a number up,
-   label it.
-4. **Use public or provided data only.** Do not scrape at a volume that gets a city site to block
-   us. Do not use private plans or blueprints without permission.
-5. **Bend the brief if it serves the goal.** Teams may go outside the three lanes as long as the
+1. **Start with one real person** and the problem they're stuck on. A nonprofit finance lead, a
+   permit tech, a congregation with a lot, a first-time buyer. Say who, and show what changes for
+   them.
+2. **Bend the brief if it serves the goal.** Teams may go outside the three lanes as long as the
    result helps get more affordable homes built in Southern California.
+3. **Play fair with data.** Public or provided data only. Don't overload or abuse city websites.
+   No private plans or blueprints without permission, and no personal information.
+
+Live demos and sources are part of how judges score (see [judging](judging.md)): finalists must
+demo live, and every law, dataset and assumption should be shown.
 
 ## More detail
 

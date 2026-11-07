@@ -75,18 +75,13 @@ cover the equation, the laws and the terms you will hear.
 4. **Name one real user.** Write down who they are and what their day looks like before and after.
    Then open your lane's data list and look at what is there.
 
-## The rules
+## Before you build
 
-1. **Name one real user** and show their before and after.
-2. **Live demo.** Show what you built working, not just slides. A working rough tool beats a
-   polished pitch.
-3. **Show your sources.** Cite the law, the dataset or the assumption. If you made a number up,
-   label it.
-4. **Public or provided data only.** Do not scrape at a volume that gets a city site to block us.
-   Do not use private plans or blueprints without permission. No personal information about real
+1. **Start with one real person** and the problem they're stuck on. Show their before and after.
+2. **Bend the brief** if it serves the goal: more affordable homes in Southern California.
+3. **Play fair with data.** Public or provided data only. Don't overload or abuse city websites.
+   No private plans or blueprints without permission, and no personal information about real
    tenants, buyers or residents.
-5. **Bend the brief if it serves the goal.** Teams may go outside the lanes as long as the result
-   helps get more affordable homes built in Southern California.
 
 The full version, with the reasons, is in [ground rules](docs/ground-rules.md).
 
@@ -107,10 +102,12 @@ finalist is scored from 1 to 5 in four areas. The areas have equal weight.
 
 | Area | The question |
 |---|---|
-| **Impact** | Would a real nonprofit or city use this next month? |
-| **Works** | Does the live demo work? Working beats polished |
-| **Rigor** | Are sources and assumptions shown? Are made-up numbers labelled? |
-| **Creativity** | Is it a new and useful way in? |
+| **Impact** | Would a real user adopt it and be better off? |
+| **Works** | Does the live demo run on real data, with sources shown? Working beats polished |
+| **Scale** | Is there a believable path to the next 100 projects? |
+| **Innovation** | Is it a new way to see or solve the problem? |
+
+Ties go to Impact.
 
 Prizes: overall 1st, 2nd and 3rd, plus a winner in each lane. A live demo is required for
 finalists. Slides alone do not place. More in [judging](docs/judging.md).

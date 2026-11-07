@@ -17,10 +17,12 @@ Judges score each finalist from 1 to 5 in four areas. The four areas have equal 
 
 | Area | The question |
 |---|---|
-| **Impact** | Would a real nonprofit or city use this next month? |
-| **Works** | Does the live demo work? Working beats polished |
-| **Rigor** | Are sources and assumptions shown? Are made-up numbers labelled? |
-| **Creativity** | How new and useful is the idea? |
+| **Impact** | Would a real user adopt it and be better off? |
+| **Works** | Does the live demo run on real data, with sources shown? Working beats polished |
+| **Scale** | Is there a believable path to the next 100 projects? A believable path beats a big claim |
+| **Innovation** | Is it a new way to see or solve the problem? New thinking, not just new tech |
+
+Ties go to Impact.
 
 A perfect project scores 5 in all four.
 

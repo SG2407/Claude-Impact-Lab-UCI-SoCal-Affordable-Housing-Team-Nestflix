@@ -3,6 +3,9 @@
 Starting points for state law text, HCD guidance, permit and progress-report data, Orange County
 city pages and factory-built housing. Compiled November 6, 2026.
 
+**These are a few places to start.** There's much more out there, and the best teams find sources
+nobody else used.
+
 **Status key.** VERIFIED means fetched and the content confirmed. VERIFIED-EXA means a plain
 fetch was blocked (403), so the content was confirmed through a different fetch tool. It opens
 fine in a normal browser. UNVERIFIED means it could not be confirmed, with the reason given.

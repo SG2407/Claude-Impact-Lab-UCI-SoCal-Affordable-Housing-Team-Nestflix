@@ -19,6 +19,11 @@ off-limits. Examples include:
 The laws are public and so is the parcel data, but nobody has connected the two in a way a small
 nonprofit can use.
 
+And a legal site isn't always a usable one. Teams still need to know who owns it and whether
+they'd sell, whether it can actually be built on (slope, contamination, fire or flood zones, water
+and sewer capacity), and whether a nonprofit can move before a market-rate buyer does. Land is the
+biggest line on the bill.
+
 ## Who is stuck
 
 A nonprofit acquisitions lead with no GIS team, a congregation sitting on an underused lot, or
