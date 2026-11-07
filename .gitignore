@@ -18,3 +18,8 @@ build/
 .next/
 .DS_Store
 *.zip
+
+# NestFlix
+backend/nestflix.db
+backend/*.db
+.pytest_cache/
