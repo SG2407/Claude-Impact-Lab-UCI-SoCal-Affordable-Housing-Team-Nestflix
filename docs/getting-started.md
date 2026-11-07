@@ -38,7 +38,7 @@ and where the data is. In the browser, add `CLAUDE.md` to your project too.
 ## 3. Claim your credits
 
 $100 in Claude API credits per person (API only, not Claude.ai). The claim link is on the hub at
-9:00 AM: <https://claudesocal.com/uci-impact-lab> (`#credits`).
+9:15 AM: <https://claudesocal.com/uci-impact-lab> (`#credits`).
 
 - Claim using your **Org ID** from [console.anthropic.com](https://console.anthropic.com), not
   your Claude.ai ID.

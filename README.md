@@ -27,7 +27,7 @@ Automations.
 - A laptop and its charger
 - A free [GitHub](https://github.com/signup) account. One per team is enough to start
 - A Claude account at [claude.ai](https://claude.ai)
-- Event credits: $100 in Claude API credits per person (API only, not Claude.ai). The claim link is on the hub at 9:00 AM. Claim using your Org ID from [console.anthropic.com](https://console.anthropic.com), not your Claude.ai ID. One claim per person. Credits are tied to the email you registered with, so people who registered on the day may not get them
+- Event credits: $100 in Claude API credits per person (API only, not Claude.ai). The claim link is on the hub at 9:15 AM. Claim using your Org ID from [console.anthropic.com](https://console.anthropic.com), not your Claude.ai ID. One claim per person. Credits are tied to the email you registered with, so people who registered on the day may not get them
 
 Wi-Fi: UCI-guest.
 
@@ -70,7 +70,7 @@ cover the equation, the laws and the terms you will hear.
 1. **Get the files.** Use this repo as a template for your team, or download it as a ZIP.
    [Getting started](docs/getting-started.md) shows both, and three ways to work with Claude:
    in the browser, in the desktop app, or in a terminal.
-2. **Claim your credits** from the hub (`#credits`) once the link is up at 9:00 AM.
+2. **Claim your credits** from the hub (`#credits`) once the link is up at 9:15 AM.
 3. **Register your team** on the hub (`#teams`) by 10:00 AM.
 4. **Name one real user.** Write down who they are and what their day looks like before and after.
    Then open your lane's data list and look at what is there.
